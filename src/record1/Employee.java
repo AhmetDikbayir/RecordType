@@ -6,8 +6,6 @@ public class Employee {
     private String email;
 
     //param const
-
-
     public Employee(String firstname, String lastname, String email) {
         this.firstname = firstname;
         this.lastname = lastname;

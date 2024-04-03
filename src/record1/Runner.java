@@ -27,6 +27,26 @@ public class Runner {
         System.out.println("double equal ile : " + (emp == emp2)); //false
         System.out.println("equals ile : " + emp.equals(emp2)); //false
 
+        //equals metodu object classının metodu dolayısıyla equals metodu override edilmezse double == ile kontrol eder.
+        //string class equals ı override etmiş ondan dolayı sadece değerlere bakıyor.
+
+        //peki immutable employee classını daha az boiler plate (basma kalıp)
+        //kodlarla oluşturamaz mıyız?
+
+        //Cevap : Java 14 ile birlikte eklenen Record özelliği ile yapabiliriz.
+
+
+        EmployeeRecord emp3=new EmployeeRecord("Ali","Can","mail@mail.com");
+        System.out.println("Record employee : "+emp3);
+
+        System.out.println("çalışan ismi : "+emp3.firstname());
+
+        //emp3.setLastname("Han");--> default olarak immutable, read-only
+
+        EmployeeRecord emp4=new EmployeeRecord("Ali","Can","mail@mail.com");
+
+        System.out.println(" == "+(emp3==emp4));//false
+        System.out.println(" equals "+(emp3.equals(emp4)));//true
 
 
 
